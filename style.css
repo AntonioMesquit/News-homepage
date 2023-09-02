@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+:root{
+    font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+
+}
+body{
+    
+    
+    display: flex;
+margin: 0;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+.card{
+    display: grid;
+   
+    padding: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "A A A"
+    "B B C"
+    "D D D";
+    gap: 1rem
+}
+header, main ,aside, footer{
+  
+    padding: 1rem; 
+}
+header{
+    grid-area: A;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.list{
+    display: flex;
+    gap: 5.2rem;
+    font-size: 1.7rem;
+}
+main{
+    
+    grid-area: B;
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    gap: 1rem;
+
+
+}
+a{
+    text-decoration: none;
+}
+.foto {
+    width: 100%;
+    height: 30rem; 
+    
+    object-fit: cover;
+}
+.text-2 p{
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin-bottom: 6rem;
+}
+.text-2 a{
+    background-color: hsl(5, 85%, 63%);
+    text-decoration: none;
+    padding: 2rem 4rem 2rem 4rem;
+    color: white;
+    font-weight: 700;
+    font-size: 1.4rem;
+    border-radius: 0.2rem;
+}
+
+.image {
+    grid-column: 1/3;
+    height: 23rem;
+}
+.texts{
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1/3;
+}
+.text-1,.text-2{
+    height: 12rem;
+    padding: 2rem;
+  
+}
+
+
+.text-2{
+    max-width: 42rem;
+} 
+.text-1 h1{
+    font-size: 4rem; 
+    width: 23rem; 
+    font-weight: 700;
+    line-height: 1.2; 
+}
+aside{
+    grid-area: C;
+}
+footer{
+    grid-area: D;
+}
+li{
+    list-style: none;
+}
+aside{
+margin-top: 1rem;
+background-color: rgb(0, 0, 26);
+height: auto;
+}
+.til{
+    color: rgb(233, 171, 83);
+    font-size: 3rem;
+    padding: 2rem;
+}
+.topic-1, .topic-2, .topic-3{
+    padding-left: 2rem;
+}
+.topic-1 h1, .topic-2 h1, .topic-3 h1{
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.topic-1 h1:hover, .topic-2 h1:hover, .topic-3 h1:hover{
+    color: rgb(233, 171, 83);
+}
+.topic-2,.topic-3{
+    margin-top: 5rem;
+}
+.topic-1 p,.topic-2 p, .topic-3 p{
+    color: rgb(170, 171, 191);
+    font-size: 1.4rem;
+    max-width: 29rem;
+    line-height: 3.2rem;
+
+}
+.topic-1, .topic-2{
+    padding-bottom: 5rem;
+    border-bottom: 1px solid rgb(170, 171, 191);
+}
+footer{
+    display: flex;
+    width: 100%;
+    height: 15rem;
+    justify-content: space-between;
+}
+.retro{
+    width: 10rem;
+    height: 13rem;
+}
+.card-1{
+    display: flex;
+}
+.tex{
+    margin-left: 0.5rem;
+}
+.tex h1{
+    color: rgb(197, 198, 206);
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.menu{
+    display: none;
+}
+.tex h2{
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.tex p{
+    max-width: 25rem;
+    font-size: 1.3rem;
+}
+.lista-2 {
+    opacity: 0;
+    background-color: white;
+    position: fixed;
+    height: 120vh;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.menus{
+    z-index: 2;
+}
+.md{
+    margin-top: 20rem;
+}
+.lista-2 li{
+   margin-left: 3rem;
+}
+@media screen and (max-width:800px){
+
+    .list{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+
+    .menu.active .menus {
+        position: fixed;
+        top: 4rem;
+        right: 3rem;
+    }
+    .menu.active .lista-2{
+      opacity: 1;
+      box-shadow: -200px 104px 148px 200px rgba(0,0,0,0.36);
+      pointer-events: auto;
+        
+    }
+    .lista-2{
+        width: 40%;
+        font-size: 2rem;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
+    .texts{
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .text-1{
+        margin-top: 5rem;
+    }
+    .text-2{
+        margin-bottom: 5rem;
+    }
+    .text-1 h1{
+        height: 1rem;
+        padding: 2rem;
+        width: 100%;
+      
+    }
+
+    .text-2 p{
+        max-width: 50rem;
+    }
+    footer{
+        flex-direction: column;
+        gap: 30px;
+    }
+   @media screen and (max-width: 485px){
+    .text-1{
+        margin-bottom: 7rem;
+    }
+    .text-2{
+        margin-bottom: 10rem;
+    }
+   }
+    @media screen and (max-width: 350px){
+        .text-1 {
+            margin-bottom: 16rem;
+            width: 100%;
+        }
+        .text-2{
+            margin-bottom: 10rem;
+        }
+    }  .lista-2{
+        width: 50%;
+    }
+
+}
