@@ -197,8 +197,11 @@ footer{
     pointer-events: none;
 }
 
-.menus{
+.menus,.menus2{
     z-index: 2;
+}
+.menus2{
+    display: none;
 }
 .md{
     margin-top: 20rem;
@@ -216,6 +219,10 @@ footer{
     }
 
     .menu.active .menus {
+       display: none;
+    }
+    .menu.active .menus2{
+        display: block;
         position: fixed;
         top: 4rem;
         right: 3rem;
@@ -277,7 +284,7 @@ footer{
             margin-bottom: 10rem;
         }
     }  .lista-2{
-        width: 50%;
+        width: 60%;
     }
 
 }
